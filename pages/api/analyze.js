@@ -1,4 +1,4 @@
-import { generatePolicyAnalysis } from '../../services/policyAnalysisService';
+import { generatePolicyAnalysis } from './policyAnalysisService';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
