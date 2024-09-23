@@ -1,4 +1,3 @@
-require('dotenv').config();
 
 module.exports = {
   apiKey: process.env.HUGGING_FACE_API_KEY,  // Load from environment variable

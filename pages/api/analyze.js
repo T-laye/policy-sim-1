@@ -1,4 +1,4 @@
-import { generatePolicyAnalysis } from './policyAnalysisService';
+import { generatePolicyAnalysis } from '../../services/policyAnalysisService';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
@@ -12,9 +12,10 @@ export default async function handler(req, res) {
         target_group,
         duration,
         expected_outcome,
-        analysis
+        analysis,
       });
     } catch (error) {
+      console.error('Error while analyzing policy:', error.message);  // Log error for debugging
       res.status(500).json({ error: 'Failed to analyze policy. ' + error.message });
     }
   } else {
