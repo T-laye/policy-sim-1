@@ -66,7 +66,7 @@ const generatePolicyAnalysis = async (policyName, budget, targetGroup, duration,
     } catch (error) {
       // Handle timeout and retry
       if (error.response && error.response.status === 504) {
-        console.warn(`Attempt ${attempt + 1} failed: ${error.message}. Retrying in 2 seconds...`);
+        console.warn(`Attempt ${attempt + 1} failed: ${error.message}. Retrying in 2 seconds....`);
         await new Promise(resolve => setTimeout(resolve, 2000));
       } else {
         console.error(`Error: ${error.message}`);
