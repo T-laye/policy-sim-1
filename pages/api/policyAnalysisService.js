@@ -1,5 +1,5 @@
 import axios from 'axios'
-const { apiKey, apiUrl } = require('./apiConfig');
+import { apiKey, apiUrl } from './apiConfig'
 
 const generatePolicyAnalysis = async (policyName, budget, targetGroup, duration, expectedOutcome, retries = 3) => {
   const prompt = `
