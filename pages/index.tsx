@@ -43,7 +43,9 @@ export default function Home() {
   	});
 
   	setResult(response.data);
-	} catch (error) {
+	console.log(response)
+} catch (error) {
+		console.log(error)
   	setError('Failed to fetch results. Please try again later.');
 	} finally {
   	setLoading(false);
