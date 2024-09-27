@@ -35,4 +35,4 @@ const generatePolicyAnalysis = async (policyName, budget, targetGroup, duration,
   }
 };
 
-module.exports = { generatePolicyAnalysis };
+export  { generatePolicyAnalysis };
