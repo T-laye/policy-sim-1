@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { apiKey, apiUrl } from './apiConfig'
+import { apiConf } from './apiConfig'
 
 const generatePolicyAnalysis = async (policyName, budget, targetGroup, duration, expectedOutcome, retries = 3) => {
   const prompt = `
@@ -12,11 +12,11 @@ const generatePolicyAnalysis = async (policyName, budget, targetGroup, duration,
   `;
 
   try {
-    const response = await axios.post(apiUrl, {
+    const response = await axios.post(apiConf.apiUrl, {
       inputs: prompt,
     }, {
       headers: {
-        Authorization: `Bearer ${apiKey}`,
+        Authorization: `Bearer ${apiConf.apiKey}`,
       },
     });
 
